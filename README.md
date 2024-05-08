@@ -34,4 +34,4 @@ Nesta disciplina, explorei práticas de infraestrutura como código (IaC), integ
 
 ## Conclusão
 
-Esta pós-graduação tem sido uma jornada enriquecedora, proporcionando-me as habilidades e conhecimentos necessários para enfrentar os desafios do desenvolvimento de software na era digital. Estou entusiasmado para aplicar o que aprendi em projetos futuros e contribuir para o avanço da indústria de tecnologia.
+Esta pós-graduação tem sido uma jornada enriquecedora, proporcionandoas habilidades e conhecimentos necessários para enfrentar os desafios do desenvolvimento de software. Estou entusiasmado para aplicar o que aprendi em projetos futuros e contribuir para o avanço da indústria de tecnologia.
