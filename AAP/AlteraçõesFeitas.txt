@@ -1,0 +1,8 @@
+1) Renomeação das variaveis para mais descritivos e em inglês:
+    - arr para array
+    - n para size
+    - trocado para swapped
+
+2) Remoção de Comentários explicativos
+
+3) simplificado condição da linha 18 para negação ao invez de comparar com "== null"
