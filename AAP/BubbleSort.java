@@ -2,7 +2,6 @@ import java.io.*;
 
 class BubbleSort {
 
-<<<<<<< HEAD
     static void bubbleSort(int[] array, int size) {
         boolean swapped;
         for (int i = 0; i < size - 1; i++) {
@@ -36,7 +35,6 @@ class BubbleSort {
         printArray(array, size);
     }
 }
-=======
     static void bubbleSort(int arr[], int n)
     {
         static void bubbleSort(int[] array) {
@@ -72,4 +70,3 @@ class BubbleSort {
         printArray(arr, n);
     }
 }
->>>>>>> f90195abb6ca886e62d570c70cc7fa51b5333cba
