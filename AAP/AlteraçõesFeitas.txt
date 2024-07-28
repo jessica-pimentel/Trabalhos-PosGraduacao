@@ -1,8 +1,13 @@
 1) Renomeação das variaveis para mais descritivos e em inglês:
     - arr para array
-    - n para size
-    - trocado para swapped
+    - trocado para isSorted
 
-2) Remoção de Comentários explicativos
+2) Trocado looping for de PrintArray para ForEach, simplificando looping
 
-3) simplificado condição da linha 18 para negação ao invez de comparar com "== null"
+3) Simplificando Assinatura do Método BubbleSort com 2 argumentos para apenas 1 (posso pegar o size com array.size)
+
+4) Trocado nome dos metodos para mais descritivos
+    - BubbleSort para sortArrayUsingBubbleSort
+    - PrintArray para printSortedArray
+
+5) Criado um metodo chamado swapElements para trocar os valores das posições e diminuir complexidade de BubbleSort
