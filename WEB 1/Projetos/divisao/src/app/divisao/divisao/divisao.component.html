@@ -1,0 +1,6 @@
+<form>
+    Numero 1: <input #numero1 type="text"/><br>
+    Numero 2: <input #numero2 type="text"/><br>
+    <input type="button" value="Divisao" (click)="divisaoBotao(numero1.value, numero2.value)"/><br><br>
+    Resultado: <input type="text" [value]="resultado" readonly/>
+</form>
