@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default">
+    <div class="conteiner-fluid">
+        <a class="navbar-brand" href="#"></a>
+    </div>
+</nav>
+
+<div class="conteiner">
+    <div class="col-md-12">
+        <form>
+            <div class="form-group row">
+                <label for="numero1" class="col-md-2 col-form-label">
+                Numero 1: 
+                </label> 
+                <div class="col-md-4">
+                    <input id="numero1" class="form-control" placeholder="Número 1" #numero1 type="text"/>
+                    <small class="form-text text-muted">
+                        Digite o 1º número da soma
+                    </small>
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="numero2" class="col-md-2 col-form-label">
+                    Numero 2:
+                </label>
+                <div class="col-md-4">
+                    <input id="numero2" class="form-control" placeholder="Número 2" #numero2 type="text"/>
+                    <small class="form-text text-muted">
+                        Digite o 2º número da soma
+                    </small>
+                </div>           
+            </div>
+            <div class="row col-md-2 offset-md-3">
+                <button type="button" class="btn btn-primary" (click)="somarBotao(numero1.value, numero2.value)">
+                    Somar
+                </button>
+            </div>
+            <div class="form-group row">
+                <label for="resultado" class="col-md-2 col-form-label">
+                    Resultado:
+                </label>
+                <div class="col-md-4">
+                    <input id="resultado" class="form-control" type="text" [value]="resultado" readonly/>
+                </div> 
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<form>
+    <p>
+        <mat-form-field>
+            <mat-label>Número 1</mat-label>
+            <input matInput placeholder="Digite o 1º número da soma" #numero1 type="text"/>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>1º número da soma</mat-hint>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>Número 2</mat-label>
+            <input matInput placeholder="Digite o 2º número da soma" #numero2 type="text"/>
+            <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            <mat-hint>2º número da soma</mat-hint>
+        </mat-form-field>
+    </p>
+
+    <button mat-raised-button type="button" color="primary" (click)="somarBotao(numero1.value, numero2.value)">
+        Somar
+    </button>
+    <p>
+        <input  matInput type="text" [value]="resultado" readonly/>
+    </p>
+</form>
