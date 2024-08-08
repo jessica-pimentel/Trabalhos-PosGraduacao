@@ -18,4 +18,12 @@ export class ListarPessoaComponent implements OnInit{
   listarTodos(): Pessoa[] {
     return this.pessoService.listarTodos();
   }
+
+  remover($event: any, pessoa : Pessoa) : void {
+    $event.preventDefault();
+    if (confirm(`Deseja realmente remover a pessoa ${pessoa.nome}?`)){
+      this.pessoService.remover(pessoa.id!);
+      this.pessoas = this.listarTodos();
+    }
+  }
 }
