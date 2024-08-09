@@ -5,13 +5,15 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { EnderecoService } from './services/endereco.service';
 import { InserirEnderecoComponent } from './inserir-endereco/inserir-endereco.component';
+import { EditarEnderecoComponent } from './editar-endereco/editar-endereco.component';
 
 
 
 @NgModule({
   declarations: [
     ListarEnderecoComponent,
-    InserirEnderecoComponent
+    InserirEnderecoComponent,
+    EditarEnderecoComponent
   ],
   imports: [
     CommonModule,

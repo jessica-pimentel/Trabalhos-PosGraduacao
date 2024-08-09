@@ -1,4 +1,4 @@
-import { Component, viewChild } from '@angular/core';
+import { Component} from '@angular/core';
 import { ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Pessoa } from '../../shared/models/pessoa.model';

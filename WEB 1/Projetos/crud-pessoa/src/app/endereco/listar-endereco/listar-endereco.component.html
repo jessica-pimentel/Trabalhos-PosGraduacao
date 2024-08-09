@@ -11,7 +11,7 @@
             <th>Cidade</th>
             <th>Estado</th>
             <th class="text-center">
-                <a [routerLink]="['/endereco/novo']" href="#" title="Novo" alt="Novo" class="btn btn-xs btn-success">
+                <a [routerLink]="['/enderecos/novo']" href="#" title="Novo" alt="Novo" class="btn btn-xs btn-success">
                     <i class="fa fa-plus" aria-hidden="true"></i> Novo
                 </a>
             </th>
@@ -25,7 +25,7 @@
             <td> {{ endereco.cidade }}</td>
             <td> {{ endereco.estado }}</td>
             <td class="text-center" style="width:300px">
-                <a [routerLink]="['/endereco/editar', endereco.id]"  href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info">
+                <a [routerLink]="['/enderecos/editar', endereco.id]"  href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info">
                     <i class="fa fa-edit" aria-hidden="true"></i> Editar
                 </a>
                 <a href="#" title="Remover" alt="Remover" class="btn btn-xs btn-danger"
