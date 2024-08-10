@@ -1,0 +1,30 @@
+<h1>Novo Curso</h1>
+
+<div class="well">
+    <form #formCurso="ngForm">
+        <div class="form-group">
+            <label for="nome">Nome:</label>
+            <input type="text" class="form-control" id="nome" name="nome" [(ngModel)] = "curso.nome" #nome="ngModel" required>
+            <div *ngIf="nome.errors && (nome.dirty || nome.touched)" class="alert alert-danger">
+                <div [hidden]="!nome.errors['required']"> Digite o nome. </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="link">Link:</label>
+            <input type="text" class="form-control" id="link" name="link" [(ngModel)] = "curso.link" #link="ngModel" required>
+            <div *ngIf="link.errors && (link.dirty || link.touched)" class="alert alert-danger">
+                <div [hidden]="!link.errors['required']"> Digite o link do curso. </div>
+            </div>
+        </div>        
+        <div class="form-group">
+            <button type="button" class="btn btn-primary"
+                (click)="inserir()"
+                [disabled]="!formCurso.form.valid">
+                <i class="fa fa-save" aria-hidden="true"></i> Salvar
+            </button>
+            <a class="btn btn-secondary" [routerLink]="['/cursos']">
+                <i class="fa fa-arrow-left" aria-hidden="true"></i> Voltar
+            </a>
+        </div>
+    </form>
+</div>
