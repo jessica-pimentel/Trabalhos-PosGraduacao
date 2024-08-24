@@ -6,6 +6,10 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
 import { EditarPessoaComponent } from './editar-pessoa/editar-pessoa.component';
+import { NumericoDirective } from '../shared/directives/numerico.directive';
+import { MinimoValidatorDirective } from '../shared/directives/minimo-validator.directive';
+import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { CaixaAltaPipe } from '../shared/pipes/caixa-alta.pipe';
 
 
 
@@ -13,15 +17,21 @@ import { EditarPessoaComponent } from './editar-pessoa/editar-pessoa.component';
   declarations: [
     ListarPessoaComponent,
     InserirPessoaComponent,
-    EditarPessoaComponent
+    EditarPessoaComponent,
+    NumericoDirective,
+    MinimoValidatorDirective,
+    CaixaAltaPipe
   ],
   imports: [
     CommonModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    NgxMaskDirective,
+    NgxMaskPipe
   ],
   providers:[
-    PessoaService
+    PessoaService,
+    provideNgxMask()
   ]
 })
 export class PessoaModule { }
