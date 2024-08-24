@@ -8,6 +8,8 @@ import { PessoaModule } from './pessoa/pessoa.module';
 import { EnderecoModule } from './endereco/endereco.module';
 import { CidadeModule } from './cidade/cidade.module';
 import { EstadoModule } from './estado/estado.module';
+import { MinimoValidatorDirective } from './shared/directives/minimo-validator.directive';
+import { CaixaAltaPipe } from './shared/pipes/caixa-alta.pipe';
 
 @NgModule({
   declarations: [
