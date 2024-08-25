@@ -8,6 +8,7 @@
     <p>Nome: {{ pessoa.nome }}</p>
     <p>Idade: {{ pessoa.idade }}</p>
     <p>Data Nascimento: {{ pessoa.DataNascimento! | mask: 'd0/M0/0000' }}</p>
+    <p>Cart.Motorista: {{ pessoa.Motorista! ? pessoa.Motorista : "Não" }}</p>
 </div>
 <div class="modal-footer">
     <button type="button" class="btn btn-outline-dark"
