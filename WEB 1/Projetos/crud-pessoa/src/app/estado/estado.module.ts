@@ -6,6 +6,7 @@ import { EstadoService } from './services/estado.service';
 import { ListarEstadoComponent } from './listar-estado/listar-estado.component';
 import { InserirEstadoComponent } from './inserir-estado/inserir-estado.component';
 import { EditarEstadoComponent } from './editar-estado/editar-estado.component';
+import { ModalEstadoComponent } from './modal-estado/modal-estado.component';
 
 
 
@@ -13,7 +14,8 @@ import { EditarEstadoComponent } from './editar-estado/editar-estado.component';
   declarations: [
     ListarEstadoComponent,
     InserirEstadoComponent,
-    EditarEstadoComponent
+    EditarEstadoComponent,
+    ModalEstadoComponent
   ],
   imports: [
     CommonModule,

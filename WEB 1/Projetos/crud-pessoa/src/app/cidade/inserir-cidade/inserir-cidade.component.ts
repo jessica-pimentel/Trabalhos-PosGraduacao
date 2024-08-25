@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Cidade } from '../../shared/models/cidade';
+import { Cidade } from '../../shared';
 import { CidadeService } from '../services/cidade.service';
 import { Router } from '@angular/router';
 

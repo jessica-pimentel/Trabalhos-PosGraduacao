@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { EnderecoService } from '../services/endereco.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { Endereco } from '../../shared/models/endereco.model';
+import { Endereco } from '../../shared';
 
 @Component({
   selector: 'app-editar-endereco',

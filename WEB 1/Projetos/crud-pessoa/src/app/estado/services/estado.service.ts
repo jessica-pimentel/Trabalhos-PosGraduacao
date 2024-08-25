@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Estado } from '../../shared/models/estado';
+import { Estado } from '../../shared/models/estado.model';
 
 const [LS_CHAVE] = ("estados");
 

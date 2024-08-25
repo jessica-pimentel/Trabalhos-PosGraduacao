@@ -1,6 +1,6 @@
 import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { Estado } from '../../shared/models/estado';
+import { Estado } from '../../shared';
 import { EstadoService } from '../services/estado.service';
 import { Router } from '@angular/router';
 
