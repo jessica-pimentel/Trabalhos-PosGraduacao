@@ -6,10 +6,9 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { InserirPessoaComponent } from './inserir-pessoa/inserir-pessoa.component';
 import { EditarPessoaComponent } from './editar-pessoa/editar-pessoa.component';
-import { NumericoDirective } from '../shared/directives/numerico.directive';
-import { MinimoValidatorDirective } from '../shared/directives/minimo-validator.directive';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-import { CaixaAltaPipe } from '../shared/pipes/caixa-alta.pipe';
+import { SharedModule } from '../shared';
+import { ModalPessoaComponent } from './modal-pessoa/modal-pessoa.component';
 
 
 
@@ -18,16 +17,15 @@ import { CaixaAltaPipe } from '../shared/pipes/caixa-alta.pipe';
     ListarPessoaComponent,
     InserirPessoaComponent,
     EditarPessoaComponent,
-    NumericoDirective,
-    MinimoValidatorDirective,
-    CaixaAltaPipe
+    ModalPessoaComponent
   ],
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
     NgxMaskDirective,
-    NgxMaskPipe
+    NgxMaskPipe,
+    SharedModule
   ],
   providers:[
     PessoaService,

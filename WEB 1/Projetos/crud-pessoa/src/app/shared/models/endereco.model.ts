@@ -7,6 +7,7 @@ export class Endereco {
         public bairro?: string,
         public cep?: number,
         public cidade?: string,
-        public estado?: string
+        public estado?: string,
+        public residencial?: boolean
     ) { }
 }

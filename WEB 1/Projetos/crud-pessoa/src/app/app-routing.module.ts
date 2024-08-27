@@ -12,12 +12,31 @@ import { EditarCidadeComponent } from './cidade/editar-cidade/editar-cidade.comp
 import { ListarEstadoComponent } from './estado/listar-estado/listar-estado.component';
 import { InserirEstadoComponent } from './estado/inserir-estado/inserir-estado.component';
 import { EditarEstadoComponent } from './estado/editar-estado/editar-estado.component';
+import { LoginComponent } from './auth/login/login.component';
+import { authGuard } from './auth/auth.guard';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'pessoas/listar',
+    redirectTo: 'login',
     pathMatch: 'full'
+  },
+  {
+    path: 'login',
+    component: LoginComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE, FUNC'
+    }
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE, FUNC'
+    }
   },
   {
     path: 'pessoas',
@@ -25,15 +44,27 @@ const routes: Routes = [
   },
   {
     path: 'pessoas/listar',
-    component: ListarPessoaComponent
+    component: ListarPessoaComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE, FUNC'
+    }
   },
   {
     path: 'pessoas/novo',
-    component: InserirPessoaComponent
+    component: InserirPessoaComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE, FUNC'
+    }
   },
   {
     path: 'pessoas/editar/:id',
-    component: EditarPessoaComponent
+    component: EditarPessoaComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE, FUNC'
+    }
   },
   {
     path: 'enderecos',
@@ -41,15 +72,27 @@ const routes: Routes = [
   },
   {
     path: 'enderecos/listar',
-    component: ListarEnderecoComponent
+    component: ListarEnderecoComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE'
+    }
   },
   {
     path: 'enderecos/novo',
-    component: InserirEnderecoComponent
+    component: InserirEnderecoComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE'
+    }
   },
   {
     path: 'enderecos/editar/:id',
-    component: EditarEnderecoComponent
+    component: EditarEnderecoComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, GERENTE'
+    }
   },
   {
     path: 'cidades',
@@ -57,15 +100,27 @@ const routes: Routes = [
   },
   {
     path: 'cidades/listar',
-    component: ListarCidadeComponent
+    component: ListarCidadeComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: 'cidades/novo',
-    component: InserirCidadeComponent
+    component: InserirCidadeComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: 'cidades/editar/:id',
-    component: EditarCidadeComponent
+    component: EditarCidadeComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN'
+    }
   },
   {
     path: 'estados',
@@ -73,15 +128,27 @@ const routes: Routes = [
   },
   {
     path: 'estados/listar',
-    component: ListarEstadoComponent
+    component: ListarEstadoComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, FUNC'
+    }
   },
   {
     path: 'estados/novo',
-    component: InserirEstadoComponent
+    component: InserirEstadoComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, FUNC'
+    }
   },
   {
     path: 'estados/editar/:id',
-    component: EditarEstadoComponent
+    component: EditarEstadoComponent,
+    canActivate: [authGuard],
+    data: {
+      role: 'ADMIN, FUNC'
+    }
   }
 ];
 

@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "module": "CommonJS",
+        "moduleResolution": "Node",
+        "lib": ["es2016", "dom"],
+        "target": "ES6"
+    }
+}

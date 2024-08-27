@@ -52,6 +52,10 @@
             </div>
         </div>
         <div class="form-group">
+            <label for="residencial">Residencial:</label>
+            <input type="checkbox" class="form-crontrol-input" id="residencial" name="residencial" [(ngModel)] = "endereco.residencial" #residencial="ngModel" required>
+        </div>
+        <div class="form-group">
             <button type="button" class="btn btn-primary"
                 (click)="inserir()"
                 [disabled]="!formEndereco.form.valid">
