@@ -24,11 +24,7 @@ const routes: Routes = [
   },
   {
     path: 'login',
-    component: LoginComponent,
-    canActivate: [authGuard],
-    data: {
-      role: 'ADMIN, GERENTE, FUNC'
-    }
+    component: LoginComponent
   },
   {
     path: 'home',

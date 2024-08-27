@@ -10,9 +10,9 @@ const LS_CHAVE: string = "usuarioLogado";
 export class LoginService {
   constructor() { }
 
-  public get usuarioLogado(): Usuario {
+  public get usuarioLogado(): Usuario | null {
     let usu = localStorage[LS_CHAVE];
-    return (usu ? JSON.parse(localStorage[LS_CHAVE]) : null);
+    return (usu ? JSON.parse(usu) : null);
   }
 
   public set usuarioLogado(usuario: Usuario) {
