@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { map, Observable, of } from 'rxjs';
 import { Usuario, Login } from '../../shared';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 const LS_CHAVE: string = "usuarioLogado";
 
@@ -8,11 +9,19 @@ const LS_CHAVE: string = "usuarioLogado";
   providedIn: 'root'
 })
 export class LoginService {
-  constructor() { }
+  BASE_URL = "http://localhost:3000/usuarios/";
 
-  public get usuarioLogado(): Usuario {
+  httpOptions = {
+    headers: new HttpHeaders({
+      'Content-Type': 'application/json'
+    })
+  };
+
+  constructor(private httpClient: HttpClient) { }
+
+  public get usuarioLogado(): Usuario | null {
     let usu = localStorage[LS_CHAVE];
-    return (usu ? JSON.parse(localStorage[LS_CHAVE]) : null);
+    return (usu ? JSON.parse(usu) : null);
   }
 
   public set usuarioLogado(usuario: Usuario) {
@@ -24,19 +33,14 @@ export class LoginService {
   }
 
   login(login: Login): Observable<Usuario | null> {
-    let usu = new Usuario(1, login.login, login.login, login.senha, "FUNC");
-
-    if (login.login == login.senha) {
-      if (login.login == "admin") {
-        usu.perfil = "ADMIN";
+    return this.httpClient.get<Usuario[]>(this.BASE_URL, this.httpOptions).pipe( map (lista => {
+      let usu = lista.find(u => u.login === login.login && u.senha===login.senha)
+      if (usu != undefined) {
+        return usu;
       }
-      else if (login.login == "gerente") {
-        usu.perfil = "GERENTE";
+      else {
+        return null;
       }
-      return of(usu);
-    }
-    else {
-      return of(null);
-    }
+    }));
   }
 }
