@@ -7,10 +7,19 @@ import lombok.Setter;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class Login {
+public class Pessoa {
     @Setter @Getter
-    private String login;
+    private int id;
 
     @Setter @Getter
-    private String senha;
+    private String nome;
+   
+    @Setter @Getter
+    private int idade;
+
+    @Setter @Getter
+    private String dataNascimento;
+
+    @Setter @Getter
+    private String motorista;
 }
