@@ -31,7 +31,8 @@ public class UsuarioREST {
 
     @GetMapping("/usuarios")
     public ResponseEntity<List<Usuario>> obterTodosUsuarios () {
-        return ResponseEntity.ok(lista);
+        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+        // return ResponseEntity.ok(lista);
     }
 
     @GetMapping("/usuarios/{id}")

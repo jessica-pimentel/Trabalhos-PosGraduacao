@@ -16,6 +16,9 @@ export class InserirEditarUsuarioComponent implements OnInit{
   id!: string;
   loading!: boolean;
   senhaAntiga: string = "";
+  mensagem: string = "";
+  mensagem_detalhes: string = "";
+  botaoDesabilitado = false;
 
   constructor(private usuarioService: UsuarioService,
               private route: ActivatedRoute,
@@ -29,13 +32,26 @@ export class InserirEditarUsuarioComponent implements OnInit{
     this.novoUsuario = !this.id;
 
     if (!this.novoUsuario) {
-      this.usuarioService.buscarPorId(+this.id).subscribe( 
-        usuario => {
-          this.usuario = usuario;
-          this.senhaAntiga = usuario.senha ? usuario.senha : "";
-          this.usuario.senha = "";
+      this.usuarioService.buscarPorId(+this.id).subscribe({
+        next: (usuario) => {
+          if (usuario == null) {
+            this.mensagem = `Erro buscando usuário ${this.id}`;
+            this.mensagem_detalhes = `Usuario não encontrado ${this.id}`;
+            this.botaoDesabilitado = true;
+          }
+          else {
+            this.usuario = usuario;
+            this.senhaAntiga = usuario.senha ? usuario.senha : "";
+            this.usuario.senha = "";
+            this.botaoDesabilitado = false;
+          }
+        },
+        error: (err) => {
+          this.mensagem = `Erro buscando usuário ${this.id}`;
+          this.mensagem_detalhes = `Usuario não encontrado ${this.id}`;
+          this.botaoDesabilitado = true;
         }
-      );
+      });
     }
   }  
 
@@ -44,23 +60,37 @@ export class InserirEditarUsuarioComponent implements OnInit{
     if (this.formUsuario.form.valid) {
       if (this.novoUsuario) {
         this.usuarioService.inserir(this.usuario).subscribe(
-          usuario => {
-            this.loading = false;
-            this.router.navigate(["/usuarios"]);
-          }
-        );
+          {
+            next: (usuario) => {
+              this.loading = false;
+              this.router.navigate(["/usuarios"]);
+            },
+            error: (err) => {
+              this.mensagem = `Erro ao inserir usuário ${this.id}`;
+              if (err.status == 409) {
+                this.mensagem_detalhes = `Usuario já existente.`;
+              }
+              else {
+                this.mensagem_detalhes = `[${err.status}] ${err.message}`;
+              }
+            }
+          });
       }
-      else {
-        if (this.usuario.senha === "") {
-          this.usuario.senha = this.senhaAntiga;
+    }
+    else {
+      if (this.usuario.senha === "") {
+        this.usuario.senha = this.senhaAntiga;
+      }
+      this.usuarioService.alterar(this.usuario).subscribe({
+        next: (usuario) => {
+          this.loading = false;
+          this.router.navigate(["/usuarios"]);
+        },
+        error: (err) => {
+          this.mensagem = `Erro alterando usuario ${this.usuario.nome}`;
+          this.mensagem_detalhes = `[${err.status}] ${err.message}`;
         }
-        this.usuarioService.alterar(this.usuario).subscribe(
-          usuario => {
-            this.loading = false;
-            this.router.navigate(["/usuarios"]);
-          }
-        );
-      }
+      });
     }
     this.loading = false;
   }
