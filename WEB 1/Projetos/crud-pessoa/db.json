@@ -1,25 +1,32 @@
 {
-    "usuarios": [
-        {
-            "id": 1,
-            "nome": "Admin",
-            "login": "admin",
-            "senha": "admin",
-            "perfil": "ADMIN"
-        },
-        {
-            "id": 2,
-            "nome": "Gerente",
-            "login": "gerente",
-            "senha": "gerente",
-            "perfil": "GERENTE"
-        },
-        {
-            "id": 3,
-            "nome": "Func",
-            "login": "func",
-            "senha": "func",
-            "perfil": "FUNC"
-        }
-    ]
+  "usuarios": [
+    {
+      "id": "1",
+      "nome": "Admin",
+      "login": "admin",
+      "senha": "admin",
+      "perfil": "ADMIN"
+    },
+    {
+      "id": "2",
+      "nome": "Gerente",
+      "login": "gerente",
+      "senha": "gerente",
+      "perfil": "GERENTE"
+    },
+    {
+      "id": "3",
+      "nome": "Func",
+      "login": "func",
+      "senha": "func",
+      "perfil": "FUNC"
+    },
+    {
+      "id": "f3a3",
+      "nome": "Jessica",
+      "login": "Jessica",
+      "senha": "Jessica",
+      "perfil": "ADMIN"
+    }
+  ]
 }

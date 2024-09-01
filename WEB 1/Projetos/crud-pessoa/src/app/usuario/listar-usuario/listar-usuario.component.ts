@@ -7,7 +7,7 @@ import { ModalUsuarioComponent } from '../modal-usuario/modal-usuario.component'
 @Component({
   selector: 'app-listar-usuario',
   templateUrl: './listar-usuario.component.html',
-  styleUrl: './listar-usuario.component.css'
+  styleUrls: ['./listar-usuario.component.css'] 
 })
 export class ListarUsuarioComponent  implements OnInit{
   usuarios: Usuario[] = [];
