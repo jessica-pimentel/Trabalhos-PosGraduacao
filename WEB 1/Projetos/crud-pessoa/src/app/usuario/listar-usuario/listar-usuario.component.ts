@@ -32,7 +32,7 @@ export class ListarUsuarioComponent  implements OnInit{
       },
       error: (err) => {
         this.mensagem = "Erro buscando lista de usuários";
-        this.mensagem_detalhes = `[${err.status}] ${err.message}`
+        this.mensagem_detalhes = `[${err.status}] ${err.message}`;
       }
     });
     return this.usuarios;
