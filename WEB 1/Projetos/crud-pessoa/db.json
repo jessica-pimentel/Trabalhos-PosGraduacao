@@ -22,17 +22,10 @@
       "perfil": "FUNC"
     },
     {
-      "id": "f3a3",
-      "nome": "Jessica",
-      "login": "Jessica",
-      "senha": "Jessica",
-      "perfil": "ADMIN"
-    },
-    {
-      "id": "5bb5",
-      "nome": "jess",
-      "login": "jess",
-      "senha": "jess",
+      "id": "c432",
+      "nome": "jessica",
+      "login": "jessica",
+      "senha": "jessica",
       "perfil": "ADMIN"
     }
   ]

@@ -34,17 +34,21 @@ export class LoginComponent implements OnInit{
   logar(): void {
     this.loading = true;
     if (this.formLogin.form.valid) {
-      this.loginService.login(this.login).subscribe((usu) => {
+      this.loginService.login(this.login).subscribe({
+      next: (usu) => {
         if (usu != null) {
           this.loginService.usuarioLogado = usu;
+          this.loading = false;
           this.router.navigate(["/home"]);
         } else {
           this.message = "Usuário/Senha inválidos.";
         }
-        this.loading = false; 
+      },
+      error: (err) => {
+        this.message = `Erro efetuando login: ${err.message}`;
+      }
       });
-    } else {
-      this.loading = false; 
-    }
+    } 
+    this.loading = false; 
   }
 }
