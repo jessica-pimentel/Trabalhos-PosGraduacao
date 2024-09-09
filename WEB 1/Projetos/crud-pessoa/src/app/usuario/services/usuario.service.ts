@@ -7,7 +7,7 @@ import { Usuario } from '../../shared';
   providedIn: 'root'
 })
 export class UsuarioService {
-  BASE_URL = "http://localhost:3000/usuarios";
+  BASE_URL = "http://localhost:8080/usuarios";
 
   httpOptions = {
     observe: "response" as "response",
