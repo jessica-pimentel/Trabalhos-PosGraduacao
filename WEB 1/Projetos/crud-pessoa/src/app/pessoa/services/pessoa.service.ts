@@ -24,7 +24,16 @@ export class PessoaService {
         if (resp.status !== 200) {
           return [];
         } else {
-          return resp.body;
+          let lista: Pessoa[] = [];
+          if (resp.body && resp.body.length>0) {
+            let pes: Pessoa = new Pessoa();
+            resp.body.forEach( p => {
+              pes = new Pessoa(p.id, p.nome, p.idade, p.dataNascimento, p.motorista);
+              pes.dateFromRest();
+              lista.push(pes);
+            })
+          }
+          return lista;
         }
       }),
       catchError((e) => {
@@ -38,6 +47,7 @@ export class PessoaService {
   }
 
   inserir(pessoa: Pessoa): Observable<Pessoa | null> {
+    pessoa.dateToRest();
     return this.httpClient.post<Pessoa>(this.BASE_URL, pessoa, this.httpOptions).pipe(
       map((resp: HttpResponse<Pessoa>) => {
         if (resp.status !== 201) {
@@ -45,7 +55,13 @@ export class PessoaService {
           return null;
         } else {
           // Retorna o corpo da resposta, que é a nova pessoa inserida
-          return resp.body;
+          let pes: Pessoa = new Pessoa(resp.body?.id, 
+            resp.body?.nome,
+            resp.body?.idade,
+            resp.body?.dataNascimento,
+            resp.body?.motorista);
+          pes.dateFromRest();
+          return pes;
         }
       }),
       catchError((e) => {
@@ -61,7 +77,13 @@ export class PessoaService {
         if (resp.status !== 200) {
           return null;
         } else {
-          return resp.body;
+          let pes: Pessoa = new Pessoa(resp.body?.id, 
+            resp.body?.nome,
+            resp.body?.idade,
+            resp.body?.dataNascimento,
+            resp.body?.motorista);
+          pes.dateFromRest();
+          return pes;
         }
       }),
       catchError((e) => {
@@ -75,12 +97,19 @@ export class PessoaService {
   }
 
   atualizar(pessoa: Pessoa): Observable<Pessoa | null> {
+    pessoa.dateToRest();
     return this.httpClient.put<Pessoa>(`${this.BASE_URL}/${pessoa.id}`, pessoa, this.httpOptions).pipe(
       map((resp: HttpResponse<Pessoa>) => {
         if (resp.status !== 200) {
           return null;
         } else {
-          return resp.body;
+          let pes: Pessoa = new Pessoa(resp.body?.id, 
+            resp.body?.nome,
+            resp.body?.idade,
+            resp.body?.dataNascimento,
+            resp.body?.motorista);
+          pes.dateFromRest();
+          return pes;
         }
       }),
       catchError((e) => {
@@ -95,7 +124,13 @@ export class PessoaService {
         if (resp.status !== 200) {
           return null;
         } else {
-          return resp.body;
+          let pes: Pessoa = new Pessoa(resp.body?.id, 
+            resp.body?.nome,
+            resp.body?.idade,
+            resp.body?.dataNascimento,
+            resp.body?.motorista);
+          pes.dateFromRest();
+          return pes;
         }
       }),
       catchError((e) => {
