@@ -1,2 +1,12 @@
+# Ignorar todos os arquivos package.json em qualquer pasta
+**/package.json
+
+# Ignorar diretórios específicos
 /INTRO - Java/trabalho/INTRO-TrabalhoFinal-BancoRRW/INTRO-TrabalhoFinal-BancoRRW_/nbproject/private/
 /INTRO - Java/trabalho/INTRO-TrabalhoFinal-BancoRRW/INTRO-TrabalhoFinal-BancoRRW_/build/
+
+# Outras regras de ignorar podem ser adicionadas aqui
+node_modules/
+dist/
+.DS_Store
+.env
