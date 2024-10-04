@@ -24,17 +24,17 @@ Na disciplina de Banco de Dados, aprendi a utilizar PostgreSQL, SQLServer e SQLi
 
 A importância de escrever código limpo e bem estruturado (Clean Code). Apliquei princípios ágeis para melhorar a qualidade do software, como refatoração contínua, testes automatizados e práticas de codificação colaborativa, garantindo um código sustentável e fácil de manter.
 
-## Arquitetura Web com Angular
+## Arquitetura Web com Angular 
 
-Nesta disciplina, adquiri conhecimentos sobre as tecnologias web fundamentais, como HTML, CSS e JavaScript, além de explorar o framework Angular e sua linguagem TypeScript. Aprendi a criar aplicações web robustas e escaláveis, seguindo as melhores práticas de arquitetura de software e os Frameworks Bootstrap e Material Design.
+Nesta disciplina, adquiri conhecimentos sobre as tecnologias web fundamentais, como HTML, CSS e JavaScript, além de explorar o framework Angular e sua linguagem TypeScript. Aprendi a criar aplicações web robustas e escaláveis, seguindo as melhores práticas de arquitetura de software e os Frameworks Bootstrap e Material Design. Além de fazer o backend com Java e fazer seu consumo rest para a aplicação Web.
 
 ## UX/UI Design
 
 Na disciplina de UX, aprendi a criar experiências de usuário intuitivas e eficazes, focando nas necessidades e comportamentos dos usuários. Desenvolvi habilidades em pesquisa, prototipagem e testes de usabilidade para garantir interfaces agradáveis e funcionais.
 
-## Desenvolvimento Mobile com Flutter
+## Desenvolvimento Mobile com Flutter, Dart e Kotlin
 
-Nesta disciplina, adquiri habilidades essenciais para o desenvolvimento de aplicativos móveis utilizando o framework Flutter e a linguagem Dart. Aprendi a construir interfaces de usuário atrativas e responsivas, além de entender os conceitos fundamentais por trás do desenvolvimento mobile moderno.
+Nesta disciplina, adquiri habilidades essenciais para o desenvolvimento de aplicativos móveis utilizando o framework Flutter e a linguagem Dart. Aprendi a construir interfaces de usuário atrativas e responsivas utilizando componentes de UI, MultiActivity, Master/Detail, além de entender os conceitos fundamentais por trás do desenvolvimento mobile moderno utilizando Kotlin.
 
 ## Testes de Software
 
