@@ -1,6 +1,10 @@
 package com.example.cambioapp
 
 import android.os.Bundle
+import android.view.View
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -15,6 +19,20 @@ class MainActivity : AppCompatActivity() {
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+    }
+
+    fun convert (view: View) {
+        val input = findViewById<EditText>(R.id.editTextInput)
+        val output = findViewById<TextView>(R.id.textViewOutPut)
+        if (input.length() == 0) {
+            Toast.makeText(this,"Digite o valor em dólar", Toast.LENGTH_SHORT).show()
+            output.text = ""
+        } else {
+
+            val dolar = input.text.toString().toDouble()
+            val real = dolar * 5.5
+            output.text = "$real reais"
         }
     }
 }
