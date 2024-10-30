@@ -7,4 +7,42 @@
     android:layout_height="match_parent"
     tools:context=".BankStatementActivity">
 
+    <TextView
+        android:id="@+id/bankStatementTextView"
+        android:layout_width="252dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="68dp"
+        android:text="Extrato bancário"
+        android:textAlignment="center"
+        android:textColor="#3F51B5"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/backButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#E45252"
+        android:onClick="destroyButton"
+        android:text="voltar"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.05"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/bankStatementListView"
+        android:layout_width="384dp"
+        android:layout_height="538dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bankStatementTextView" />
 </androidx.constraintlayout.widget.ConstraintLayout>
