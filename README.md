@@ -34,7 +34,7 @@ Na disciplina de UX, aprendi a criar experiências de usuário intuitivas e efic
 
 ## Desenvolvimento Mobile com Flutter, Dart e Kotlin
 
-Nesta disciplina, adquiri habilidades essenciais para o desenvolvimento de aplicativos móveis utilizando o framework Flutter e a linguagem Dart. Aprendi a construir interfaces de usuário atrativas e responsivas utilizando componentes de UI, MultiActivity, Master/Detail, além de entender os conceitos fundamentais por trás do desenvolvimento mobile moderno utilizando Kotlin.
+Nesta disciplina, adquiri habilidades essenciais para o desenvolvimento de aplicativos móveis utilizando o framework Flutter e a linguagem Dart. Aprendi a construir interfaces de usuário atrativas e responsivas utilizando componentes de UI, MultiActivity, Master/Detail, além de entender os conceitos fundamentais por trás do desenvolvimento mobile moderno utilizando Kotlin. Persistência de dados interna e externa com SQLite.
 
 ## Testes de Software
 
