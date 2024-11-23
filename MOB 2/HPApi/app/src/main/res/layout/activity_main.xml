@@ -1,0 +1,59 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Harry Potter API"
+            android:textSize="35sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="24dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnCharacterById"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar Personagem por ID"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnStaff"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Listar Professores"
+                android:layout_marginBottom="12dp" />
+
+            <Button
+                android:id="@+id/btnStudentsByHouse"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Listar Estudantes por Casa" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnExit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sair"
+        android:layout_marginTop="16dp" />
+</LinearLayout>
