@@ -1,4 +1,4 @@
-# Pós-graduação em Desenvolvimento Ágil de Software
+# Pós-Graduação em Desenvolvimento Ágil de Software
 
 ## Sobre
 
